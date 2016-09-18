@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OnePush</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/Vibrant.min.js"></script>
+    <!-- <script src="js/quantize.js"></script> -->
+    <script src="js/color-thief.min.js"></script>
+    <script src="js/lodash.core.min.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <script src="js/custom.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <header>
+          <div class="col-md-12">
+            <div class="logo">
+              <div class="logo-image">
+                <center><img src="images/logo.png" alt="OnePush Logo" title="OnePush"></center></div>
+              <div class="logo-slogan">finding the best online website</div>
+            </div>
+            <hr>
+          </div>
+        </header>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <div class="col-md-12">
+            <form action="" method="get">
+              <div class="input-group">
+                <input type="text" name="q" id="search" placeholder="Search..." class="form-control">
+                <span class="input-group-btn">
+                  <button class="btn btn-success" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+            </div>
+            </form>
+          </div>
+
+
+          <div class="col-md-12">
+
+          <div class="add-new-block">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <div class="avatar" style="background-image: url('images/avatar.png');">
+                  <img src="images/avatar.png" style="display:none" id="avatar">
+                </div>
+              </div>
+              <div class="panel-body">
+                <span class="site-title">
+                  <p title="{{title}}">
+                    <input type="text" placeholder="Enter Site Title" id="site-title" class="add-title-tbox">
+                  </p>
+                </span>
+                <span class="site-url">
+                  <p title="{{url_address}}"><span class="glyphicon glyphicon-globe"></span>
+                    <input type="text" placeholder="https://www.example.com/" id="site-url" class="add-url-tbox">
+                  </p>
+                </span>
+              </div>
+              <div class="panel-footer">
+                <span class="site-tag">
+                  <p>
+                    <input type="text" placeholder="Enter Site Tag" id="site-tag" class="add-tag-tbox">
+                  </p>
+                </span>
+              </div>
+              <div class="panel-footer add-new-btn">
+                <button type="submit" class="btn btn-success" id="push-new">PUSH <span class="glyphicon glyphicon-forward"></span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert" id="msg"></div>
+
+          <hr>
+
+          <script id="menu" type="text/x-handlebars-template">
+            <div class="menu">
+              <ul class="list-group">
+                {{#each menu}}
+                  <a onclick="window.location = window.location.href.split('?')[0] + '?q={{this}}'"><li class="list-group-item">{{this}}</li></a>
+                {{/each}}
+              </ul>
+            </div>
+          </script>
+          <div class="menu-disp"></div>
+
+        </div>
+
+        </div>
+
+        <div class="col-md-9">
+
+          <script id="sites" type="text/x-handlebars-template">
+            <div class="intro-disp">
+            <div class="col-md-12">
+              <div class="content-meta pull-left">Displaying {{count}} websites.</div>
+              
+              {{#if showAllBtn}}
+              <div class="content-meta pull-right"><a onclick="window.location = window.location.href.split('?')[0]">Show All</a></div>
+              {{/if}}
+            </div>
+
+            {{#each websites}}
+            <div class="col-md-4" id="site-{{id}}" data-id="{{id}}">
+              <!-- <a href="{{url_address}}" target="_blank" rel="nofollow"> -->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="avatar" style="background-image: url('{{favicon_image}}');">
+                      <img src="{{favicon_image}}" style="display:none" id="avatar">
+                      <div class="like-button-{{id}}" data-lid="{{id}}"><p><span class="glyphicon glyphicon-thumbs-up"></span></p></div>
+                      <div class="like-box-{{id}}"> {{likes}} </div>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <span class="site-title">
+                      <p title="{{title}}">{{title}}</p>
+                    </span>
+                    <span class="site-url">
+                      <p><span title="{{url_address}}"><span class="glyphicon glyphicon-globe"></span> {{domain}}</span></p>
+                    </span>
+                  </div>
+                  <div class="panel-footer">
+                    <span class="site-tag">
+                      <p>{{tag}}</p>
+                    </span>
+                  </div>
+                </div>
+              <!-- </a> -->
+            </div>
+            {{/each}}
+            </div>
+          </script>
+          <div class="sites-disp"></div>
+          <div class="loading">
+            <img src="images/preloader.gif" alt="Loading" title="Please wait...">
+            Loading...
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+@import 'https://fonts.googleapis.com/css?family=Poiret+One';
+body {
+  font-family: 'Poiret One', cursive;
+}
+.logo {
+  margin-top: 20px;
+}
+.logo-slogan {
+  text-align: center;
+}
+.logo-image img {
+  width: 150px;
+  height: 40px;
+  margin: 0 auto;
+}
+hr {
+  border-color: #ddd;
+}
+.avatar {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #efefef;
+  height: 75px;
+  width: 75px;
+  margin-left: 23%;
+  margin-right: auto;
+  background-size: cover;
+  background-color: #fff;
+  position: absolute;
+}
+div[class^=like-button-] {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #efefef;
+  background-color: rgba(0,0,0,0.6);
+  height: 100%;
+  width:100%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px 10px 15px 10px;
+  color: #fff;
+  font-size: 30px;
+  display:none;
+}
+.panel-heading {
+  min-height: 50px;
+}
+.panel {
+  border-radius: 0px;
+}
+.panel-body {
+  padding-top: 35px;
+  margin-bottom: -10px;
+}
+.site-title {
+  text-align:center;
+  font-weight: bold;
+  width: 100%;
+  font-size: 24px;
+  margin: 0 auto;
+}
+.site-title > p {
+  width: 96%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+.sites-disp a {
+  color: #333;
+}
+.sites-disp a:hover {
+  text-decoration: none;
+}
+
+.site-tag {
+  text-align:center;
+  font-weight: bold;
+  width: 100%;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 0px;
+}
+.site-tag p {
+  margin-bottom: 0px;
+}
+.add-new-block {
+  clear: both;
+  margin-top: 20px;
+}
+.add-title-tbox {
+  text-align: center;
+  width: 96%;
+  margin: 0 auto;
+  border-width: 0px;
+}
+.add-tag-tbox {
+  text-align: center;
+  width: 96%;
+  margin: 0 auto;
+  border-width: 0px;
+  background-color: #f5f5f5;
+}
+.add-title-tbox:focus, .add-tag-tbox:focus, .add-url-tbox:focus {
+  outline: none;
+}
+.add-new-btn {
+  padding:0px;
+}
+.add-new-btn > button {
+  border-radius: 0px;
+  width: 100%;
+  border-width: 0px;
+  font-weight: bold;
+}
+.add-url-tbox {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  border-width: 0px;
+  background-color: #f5f5f5;
+}
+.site-url {
+  text-align:center;
+  width: 100%;
+  margin: 0 auto;
+}
+.site-url > p {
+  width: 96%;
+  text-align: center;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  float: left;
+}
+.content-meta {
+  height: 33px;
+  margin-bottom: 20px;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 20px;
+}
+div[class^=like-box-] {
+  position: absolute;
+  height: 20px;
+  width: auto;
+  min-width: 20px;
+  right: -5px;
+  bottom: -5px;
+  padding: 2px 3px 3px 3px;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 50%;
+  background-color: black;
+  text-align: center;
+}
+div[class^=like-button-]:hover {
+  cursor: pointer;
+}
+#msg {
+  display: none;
+}
+.loading {
+  width: 50px;
+  margin: 0 auto;
+  margin-top: 30%;
+}
+.loading img {
+  width: 100%;
+}
+.list-group-item, .list-group-item:last-child {
+  border-width: 0px;
+  border-bottom-width: 1px;
+  border-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.list-group-item:hover, .list-group a:hover{
+  cursor: pointer;
+  text-decoration: none;
+}
